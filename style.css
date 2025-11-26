@@ -1,0 +1,340 @@
+/* Palet Warna Baru Berdasarkan Gambar (Hanya 2 Warna Utama):
+#C5ADED - Lavender (Primary/Aksen)
+#FFC8DD - Soft Pink Lebih Cerah (Secondary/Background)
+*/
+
+:root {
+    --color-primary: #C5ADED; /* Lavender */
+    --color-secondary: #FFC8DD; /* Soft Pink Cerah */
+    --color-primary-dark: #A290E7; /* Primary sedikit gelap untuk hover/aksen */
+    --color-secondary-dark: #F8ABEB; /* Soft Pink lebih tua (dari palet lama) untuk aksen */
+    --color-text: #333;
+    --color-text-light: #fff;
+    --color-background-light: #f9f9f9;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-text-light);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Header & Navigation --- */
+header {
+    background-color: var(--color-primary); /* Lavender */
+    color: var(--color-text-light);
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--color-text-light);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--color-secondary-dark); /* Menggunakan pink lebih tua sebagai hover */
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    /* Mengganti gradasi dengan dua warna utama */
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: var(--color-text-light);
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-content h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--color-secondary); /* Pink Cerah */
+    color: var(--color-text);
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cta-button:hover {
+    background-color: var(--color-secondary-dark); /* Pink lebih tua */
+    transform: translateY(-2px);
+}
+
+/* --- General Section Styling --- */
+.section-padding {
+    padding: 80px 0;
+}
+
+.light-bg {
+    background-color: var(--color-background-light);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    font-size: 2.5em;
+    color: var(--color-primary); /* Lavender */
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.intro-text {
+    text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Services Grid --- */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    color: var(--color-text-light);
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-card h3 {
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* Mengatur ulang warna kartu layanan agar hanya menggunakan dua warna utama */
+.pink-bg { background-color: var(--color-secondary-dark); } /* Pink lebih tua */
+.blue-bg { background-color: var(--color-secondary); } /* Pink Cerah */
+.lavender-bg { background-color: var(--color-primary); } /* Lavender */
+.soft-pink-bg { background-color: var(--color-secondary); } /* Pink Cerah */
+
+/* --- Why Choose Us List --- */
+.why-list ul {
+    list-style: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.why-list li {
+    background-color: var(--color-text-light);
+    border-left: 5px solid var(--color-primary); /* Menggunakan Lavender sebagai border */
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.why-list li strong {
+    color: var(--color-primary);
+}
+
+/* --- Pharmacist Profile Section --- */
+
+.pharmacist-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Agar responsif di layar kecil */
+}
+
+.pharmacist-card {
+    background-color: var(--color-background-light);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    width: 300px;
+    text-align: center;
+    padding-bottom: 25px;
+    overflow: hidden;
+}
+
+/* STYLING BARU UNTUK FOTO PROFIL */
+.photo-container {
+    width: 100%;
+    height: 200px; /* Ukuran kotak foto */
+    overflow: hidden; 
+    margin-bottom: 20px;
+}
+
+.pharmacist-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Memastikan gambar memenuhi kotak tanpa terdistorsi */
+    transition: transform 0.5s ease;
+}
+
+.pharmacist-card:hover .pharmacist-photo {
+    transform: scale(1.05); /* Efek zoom saat kursor diarahkan */
+}
+/* AKHIR STYLING BARU UNTUK FOTO PROFIL */
+
+
+.pharmacist-card h3 {
+    color: var(--color-text);
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.pharmacist-card .role {
+    color: var(--color-primary); /* Lavender */
+    font-style: italic;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.pharmacist-card .bio {
+    padding: 0 20px;
+    font-size: 0.9em;
+}
+
+.pharmacist-card .bio p {
+    margin-bottom: 10px;
+}
+
+.pharmacist-card .sipa {
+    font-size: 0.8em;
+    color: #888;
+    margin-top: 15px;
+}
+
+/* --- Registration Form --- */
+.form-section {
+    background-color: var(--color-secondary); /* Pink Cerah */
+    color: var(--color-text);
+}
+
+.form-section .section-header h2 {
+    color: var(--color-text);
+}
+
+.consultation-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: var(--color-text-light);
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--color-primary); /* Lavender */
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--color-primary); /* Lavender */
+    outline: none;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--color-primary); /* Lavender */
+    color: var(--color-text-light);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: var(--color-primary-dark); /* Lavender sedikit gelap */
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--color-primary-dark); /* Menggunakan Lavender sedikit gelap untuk footer */
+    color: var(--color-text-light);
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 5px 0;
+}
